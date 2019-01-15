@@ -59,27 +59,27 @@ window.onkeydown = function(event){
     	var keycode = event.charCode || event.keyCode;
 	   //Spacebar Horn
     	if(keycode == 32){
-        	playSound(1);
+        	playSound(0);
     	}
     	//G key triggers Gat
     	if(keycode == 71){
-    		playSound(2);
+    		playSound(1);
     	}
         //T key triggers TD4W
         if (keycode == 84){
-            playSound(3);
+            playSound(2);
         }
         //D key triggers De Wae
         if (keycode == 68){
-            playSound(4);
+            playSound(3);
         }
         //N key does not know De Wae
         if (keycode == 78){
-            playOverlap(notdewae);
+            playSound(4);
         }
         //H key does Hey Now
         if (keycode == 72){
-            playSound(0);
+            playSound(1);
         }
         //Y key does Yas
         if (keycode == 89){
