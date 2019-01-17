@@ -27,6 +27,7 @@ function playSound(number) {
       snd.play();
     }
       //sounds[number].play();
+      snd = undefined;
 }
 
 //Keyboard support
