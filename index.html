@@ -29,7 +29,7 @@
 		</head>
 		<body class="">
 			<div class="container">
-				<img src="pipe.gif" alt="BWAAAAMP" onclick="playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)));">
+				<img src="pipe.gif" alt="BWAAAAMP" onclick="playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)), false);">
 				<div id="audioElements"></div>
 				<div class="help-box">
 					<div class="help-header">
@@ -37,13 +37,13 @@
 					</div>
 					<div class="help-content">
 						<ul>
-							<li><a onclick="playSound(0)"><b>Spacebar</b> - Horn</a></li>
-							<li><a onclick="playSound(3)"><b>D</b> - Do u know de wae?</a></li>
-							<li><a onclick="playSound(1)"><b>G</b> - Gunshot (Gat, gat, gat)</a></li>
-							<li><a onclick="playSound(4)"><b>N</b> - U do not know de wae</a></li>
-							<li><a onclick="playSound(2)"><b>T</b> - Turn down for what!?</a></li>
-							<li><a onclick="playSound(5);"><b>Y</b> - Yaaassss</a></li>
-							<li><a onclick="playSound(6);"><b>B</b> - Beeb</a></li>
+							<li><a onclick="playSound(0, true)"><b>Spacebar</b> - Horn</a></li>
+							<li><a onclick="playSound(3, false)"><b>D</b> - Do u know de wae?</a></li>
+							<li><a onclick="playSound(1, true)"><b>G</b> - Gunshot (Gat, gat, gat)</a></li>
+							<li><a onclick="playSound(4, false)"><b>N</b> - U do not know de wae</a></li>
+							<li><a onclick="playSound(2, false)"><b>T</b> - Turn down for what!?</a></li>
+							<li><a onclick="playSound(5, true);"><b>Y</b> - Yaaassss</a></li>
+							<li><a onclick="playSound(6, true);"><b>B</b> - Beeb</a></li>
 						</ul>
 					</div>
 				</div>

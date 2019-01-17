@@ -19,12 +19,15 @@ function stopSound(number) {
         sounds[number].stop();
     }
 }
-function playSound(number) {
+function playSound(number, overlapping = false) {
 
     if(sounds[number]){
       var snd = new Audio();
-      snd = sounds[number].cloneNode();
-      snd.play();
+      if( overlapping ) {
+          snd = sounds[number].cloneNode();
+          snd.play();
+       }
+       else { sounds[number].play(); }
     }
       //sounds[number].play();
       snd = undefined;
@@ -40,27 +43,28 @@ window.onkeydown = function(event){
     	}
     	//G key triggers Gat
     	if(keycode == 71){
-    		playSound(1);
+    	  overlapping = true;
+    		playSound(1, overlapping);
     	}
         //T key triggers TD4W
         if (keycode == 84){
-            playSound(2);
+            playSound(2, false);
         }
         //D key triggers De Wae
         if (keycode == 68){
-            playSound(3);
+            playSound(3, false);
         }
         //N key does not know De Wae
         if (keycode == 78){
-            playSound(4);
+            playSound(4, false);
         }
         //B key does Beeb
         if (keycode == 66){
-            playSound(6);
+            playSound(6, true);
         }
         //Y key does Yas
         if (keycode == 89){
-            playSound(5);
+            playSound(5, true);
         }
          
 }
