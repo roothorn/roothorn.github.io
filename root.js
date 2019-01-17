@@ -24,25 +24,15 @@ var base64ToBuffer = function (buffer) {
     }
     return buffer;
 };
-function stopSound() {
-    if (source) {
-        source.stop(0);
+function stopSound(number) {
+    if (sounds[number]) {
+        sounds[number].stop();
     }
 }
 function playSound(number) {
 
-    sounds[number].play();
-}
-function initSound(arrayBuffer) {
-    var base64String = bufferToBase64(arrayBuffer);
-    var audioFromString = base64ToBuffer(base64String);
-    document.getElementById("mp3String").value=base64String;
-    context.decodeAudioData(audioFromString, function (buffer) {
-        // audioBuffer is global to reuse the decoded audio later.
-        audioBuffer = buffer;
-    }, function (e) {
-        console.log('Error decoding file', e);
-    });
+    if(sounds[number])
+      sounds[number].play();
 }
 
 //Keyboard support
