@@ -23,7 +23,7 @@ function playSound(number) {
 
     if(sounds[number]){
       var snd = new Audio();
-      snd = sounds[number];
+      snd = sounds[number].cloneNode();
       snd.play();
     }
       //sounds[number].play();
