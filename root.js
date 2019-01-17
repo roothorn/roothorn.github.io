@@ -49,6 +49,10 @@ window.onkeydown = function(event){
     	if(keycode == 71){
     		playSound(1, overlapping);
     	}
+    	        //R key triggers Ricola
+        if (keycode == 82){
+            playSound(2, notOverlapping);
+        }
         //T key triggers TD4W
         if (keycode == 84){
             playSound(2, notOverlapping);
