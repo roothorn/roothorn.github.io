@@ -49,13 +49,14 @@ window.onkeydown = function(event){
         if (keycode == 78){
             playSound(4);
         }
-        //H key does Hey Now
-        if (keycode == 72){
-            playSound(1);
+        //B key does Beeb
+        if (keycode == 66){
+            playSound(6);
         }
         //Y key does Yas
         if (keycode == 89){
             playSound(5);
         }
+         
 }
 
