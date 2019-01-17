@@ -15,7 +15,8 @@
       html{background-repeat:no-repeat;background-size:cover}img{position:absolute;top:20%;left:20%;margin:0 auto}.help-box{color:#555;border-radius:10px;font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;padding:10px;margin:10px;background:#e9ffd9;border:1px solid #a6ca8a;width:150px;float:right}.help-content{float:left}.help-content li{list-style:none}.help-content ul{padding:0}.help-header{font-family:Tahoma,Geneva,Arial,sans-serif;font-size:20px;text-align:center}#donate{position:fixed;bottom:0;right:0}
 			</style>
 			<!-- root scripts -->
-			<script type="text/javascript" async="" src="dc.js"></script><script type="text/javascript" src="root.js"></script>
+			<!-- <script type="text/javascript" async="" src="dc.js"></script> -->
+			<script type="text/javascript" src="root.js"></script>
 			<!-- Google Analytics -->
 			<script type="text/javascript">
 				/* var _gaq = _gaq || [];
@@ -31,7 +32,7 @@
 		</head>
 		<body class="">
 			<div class="container">
-				<img src="pipe.gif" alt="BWAAAAMP" onclick="playSound(0);">
+				<img src="pipe.gif" alt="BWAAAAMP" onclick="playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)));">
 				<div id="audioElements"></div>
 				<div class="help-box">
 					<div class="help-header">
