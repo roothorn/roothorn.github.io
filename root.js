@@ -37,34 +37,35 @@ function playSound(number, overlapping = false) {
 window.onkeydown = function(event){
 	event = event || window.event;
     	var keycode = event.charCode || event.keyCode;
+    	var overlapping = true;
+    	var notOverlapping = false;
 	   //Spacebar Horn
     	if(keycode == 32){
-        	playSound(0);
+        	playSound(0, overlapping);
     	}
     	//G key triggers Gat
     	if(keycode == 71){
-    	  overlapping = true;
     		playSound(1, overlapping);
     	}
         //T key triggers TD4W
         if (keycode == 84){
-            playSound(2, false);
+            playSound(2, notOverlapping);
         }
         //D key triggers De Wae
         if (keycode == 68){
-            playSound(3, false);
+            playSound(3, notOverlapping);
         }
         //N key does not know De Wae
         if (keycode == 78){
-            playSound(4, false);
+            playSound(4, notOverlapping);
         }
         //B key does Beeb
         if (keycode == 66){
-            playSound(6, true);
+            playSound(6, overlapping);
         }
         //Y key does Yas
         if (keycode == 89){
-            playSound(5, true);
+            playSound(5, overlapping);
         }
          
 }
