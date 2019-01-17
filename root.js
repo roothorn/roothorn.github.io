@@ -21,8 +21,12 @@ function stopSound(number) {
 }
 function playSound(number) {
 
-    if(sounds[number])
-      sounds[number].play();
+    if(sounds[number]){
+      var snd = new Audio();
+      snd = sounds[number];
+      snd.play();
+    }
+      //sounds[number].play();
 }
 
 //Keyboard support
