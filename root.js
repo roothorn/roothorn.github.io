@@ -51,7 +51,7 @@ window.onkeydown = function(event){
     	}
     	        //R key triggers Ricola
         if (keycode == 82){
-            playSound(2, notOverlapping);
+            playSound(8, notOverlapping);
         }
         //T key triggers TD4W
         if (keycode == 84){
