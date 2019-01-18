@@ -60,7 +60,7 @@ window.onkeydown = function(event){
         }
         //D key triggers De Wae
         if (keycode == 68){
-            playSound(8, notOverlapping);
+            playSound(9, notOverlapping);
         }
         //N key does not know De Wae
         if (keycode == 78){
