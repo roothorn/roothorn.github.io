@@ -38,7 +38,7 @@ function playSound(number, overlapping = false) {
       snd = undefined;
 }
 
-function playRandomSound() { playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)), false); }
+function playRandomSound( overlapping = false ) { playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)), overlapping); }
 
 //Keyboard support
 window.onkeydown = function(event){
@@ -93,7 +93,7 @@ window.onkeydown = function(event){
         
         //? or / 191
         if (keycode == 191){
-            playRandomSound();
+            playRandomSound( overlapping );
         }
          
 }
