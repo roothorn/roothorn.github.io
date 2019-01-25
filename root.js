@@ -37,6 +37,8 @@ function playSound(number, overlapping = false) {
       snd = undefined;
 }
 
+function playRandomSound() { playSound(Math.floor(Math.random() * Math.floor(window.sounds.length)), false); }
+
 //Keyboard support
 window.onkeydown = function(event){
 	event = event || window.event;
@@ -82,6 +84,11 @@ window.onkeydown = function(event){
         //Y key does Yas
         if (keycode == 89){
             playSound(5, overlapping);
+        }
+        
+        //? or / 191
+        if (keycode == 191){
+            playRandomSound();
         }
          
 }
