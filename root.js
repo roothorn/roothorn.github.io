@@ -102,7 +102,7 @@ window.onkeydown = function(event){
     	}
     	
     	//I key Toasty
-    	if(keyCode == 73){
+    	if(keycode == 73){
     	  playSound(22, overlapping);
     	}
     	
