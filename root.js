@@ -54,6 +54,8 @@ function playRandomSound( overlapping = false ) { playSound(Math.floor(Math.rand
 //Keyboard support
 window.onkeydown = function(event){
 	event = event || window.event;
+	event.stopPropagation();
+	
     	var keycode = event.charCode || event.keyCode;
     	var overlapping = true;
     	var notOverlapping = false;

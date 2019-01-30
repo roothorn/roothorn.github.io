@@ -29,7 +29,7 @@
 			</script>
 		</head>
 		<body class="">
-			<div class="container">
+			<div class="container" id="horn">
 				<img src="pipe.gif" alt="BWAAAAMP" onclick="playSound(0,true)">
 				<div id="audioElements"></div>
 				<div class="help-box">
@@ -74,8 +74,8 @@
 				</div>	-->
 			</div>
 
-<form class="speachform">
-    <input type="text" class="txt"><br />
+<form class="speechform">
+    <input type="text" class="txt" value="Freestylin"><br />
         <select>
 
     </select>
@@ -89,6 +89,11 @@
       <div class="pitch-value">1</div>
       <div class="clearfix"></div>
     </div>
+    <div>
+      <label for="volume">Volume</label><input type="range" min="0.1" max="10" value="1" step="0.5" id="volume">
+      <div class="volume-value">10</div>
+      <div class="clearfix"></div>
+    </div>
     <div class="controls">
       <button id="play" type="submit">Speak</button>
     </div>
@@ -97,7 +102,7 @@
 	<script type="text/javascript">
 			var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form.speachform');
+var inputForm = document.querySelector('form.speechform');
 var inputTxt = document.querySelector('.txt');
 var voiceSelect = document.querySelector('select');
 
@@ -105,6 +110,8 @@ var pitch = document.querySelector('#pitch');
 var pitchValue = document.querySelector('.pitch-value');
 var rate = document.querySelector('#rate');
 var rateValue = document.querySelector('.rate-value');
+var volume = document.querySelector('#volume');
+var volumeValue = document.querySelector('.volume-value');
 
 var voices = [];
 
@@ -158,6 +165,7 @@ function speak(){
     }
     utterThis.pitch = pitch.value;
     utterThis.rate = rate.value;
+    utterThis.volume = volume.value;
     synth.speak(utterThis);
   }
 }
@@ -176,6 +184,10 @@ pitch.onchange = function() {
 
 rate.onchange = function() {
   rateValue.textContent = rate.value;
+}
+
+volume.onchange = function() {
+  volumeValue.textContent = volume.value;
 }
 
 voiceSelect.onchange = function(){
