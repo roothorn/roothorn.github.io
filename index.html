@@ -14,6 +14,7 @@
       a { cursor: pointer } .help-header { background: black; color: #fff; border-radius: 5px }
       input[type=range]{-webkit-appearance:none;width:300px;margin:5.85px 0}input[type=range]:focus{outline:none}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11.3px;cursor:pointer;box-shadow:.9px .9px 1.7px #002200,0 0 .9px #003c00;background:#205928;border-radius:1px;border:1.1px solid #18d501}input[type=range]::-webkit-slider-thumb{box-shadow:2.6px 2.6px 3.7px #00aa00,0 0 2.6px #00c300;border:2.5px solid #83e584;height:23px;width:23px;border-radius:12px;background:#439643;cursor:pointer;-webkit-appearance:none;margin-top:-6.95px}input[type=range]:focus::-webkit-slider-runnable-track{background:#215d2a}input[type=range]::-moz-range-track{width:100%;height:11.3px;cursor:pointer;box-shadow:.9px .9px 1.7px #002200,0 0 .9px #003c00;background:#205928;border-radius:1px;border:1.1px solid #18d501}input[type=range]::-moz-range-thumb{box-shadow:2.6px 2.6px 3.7px #00aa00,0 0 2.6px #00c300;border:2.5px solid #83e584;height:23px;width:23px;border-radius:12px;background:#439643;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11.3px;cursor:pointer;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#1f5526;border:1.1px solid #18d501;border-radius:2px;box-shadow:.9px .9px 1.7px #002200,0 0 .9px #003c00}input[type=range]::-ms-fill-upper{background:#205928;border:1.1px solid #18d501;border-radius:2px;box-shadow:.9px .9px 1.7px #002200,0 0 .9px #003c00}input[type=range]::-ms-thumb{box-shadow:2.6px 2.6px 3.7px #00aa00,0 0 2.6px #00c300;border:2.5px solid #83e584;height:23px;width:23px;border-radius:12px;background:#439643;cursor:pointer;height:11.3px}input[type=range]:focus::-ms-fill-lower{background:#205928}input[type=range]:focus::-ms-fill-upper{background:#215d2a}
       label, [class$="-value"] {float: right; background: black; border-radius: 5px; color: #fff; font-size: 12px; font-weight: bold; min-width: 5em; font-family: Tahoma, Arial, sans-serif; text-align: center; margin-top: 5px } .speechform { width: 370px } [class$="-value"] { float: none }
+      li a b.letter { background: black; color: #fff; border-radius: 100% }
 			</style>
 			<!-- root scripts -->
 			<!-- <script type="text/javascript" async="" src="dc.js"></script> -->
@@ -42,27 +43,27 @@
 					<div class="help-content">
 						<ul>
 							<li style="border-bottom: 1px solid black"><a onclick="playSound(0, true)"><b>[ Spacebar ]</b> &gt; Horn</a></li>
-              <li><a onclick="playSound(12, true);"><b>A</b> &gt; Aw Hell Naw</a></li>
-							<li><a onclick="playSound(6, true);"><b>B</b> &gt; Beeb (Mac Message)</a></li>
-							<li><a onclick="playSound(16, true);"><b>C</b> &gt; Dixie Horn</a></li>							
-							<li><a onclick="playSound(9, false)"><b>D</b> &gt; Draxx Them Clownst</a></li>
-							<li><a onclick="playSound(11, false)"><b>E</b> &gt; That Was Easy</a></li>
-							<li><a onclick="playSound(1, true)"><b>F</b> &gt; Fire Shotgun</a></li>
-							<li><a onclick="playSound(15, true)"><b>G</b> &gt; Giggity</a></li>							
-							<li><a onclick="playSound(13, false)"><b>H</b> &gt; Hey Kid</a></li>
-							<li><a onclick="playSound(22, true)"><b>I</b> &gt; Toasty</a></li>
-							<li><a onclick="playSound(18, false)"><b>K</b> &gt; God Dangit Bobby</a></li>							
-							<li><a onclick="playSound(17, false)"><b>M</b> &gt; Quick Maths</a></li>
-							<li><a onclick="playSound(21, false)"><b>N</b> &gt; Deez Nutz</a></li>
-							<li><a onclick="playSound(7, true);"><b>O</b> &gt; Oh Yeah</a></li>
-              <li><a onclick="playSound(14, false);"><b>P</b> &gt; Pork Chop</a></li>
-              <li><a onclick="playSound(19, false);"><b>Q</b> &gt; Perfect</a></li>              
-							<li><a onclick="playSound(8, true);"><b>R</b> &gt; Ricola</a></li>
-							<li><a onclick="playSound(10, true);"><b>S</b> &gt; Damn Son</a></li>
-							<li><a onclick="playSound(2, false)"><b>T</b> &gt; Turn down for what?</a></li>
-							<li><a onclick="playSound(23, true)"><b>W</b> &gt; SW Everday</a></li>
-							<li><a onclick="playSound(5, true);"><b>Y</b> &gt; Yasss!</a></li>
-							<li style="border-bottom: 1px solid black"><a onclick="playSound(20, true);"><b>Z</b> &gt; Aw Thanks Mista!</a></li>
+              <li><a onclick="playSound(12, true);"><b class="letter">A</b> Aw Hell Naw</a></li>
+							<li><a onclick="playSound(6, true);"><b class="letter">B</b> Beeb (Mac Message)</a></li>
+							<li><a onclick="playSound(16, true);"><b class="letter">C</b> Dixie Horn</a></li>							
+							<li><a onclick="playSound(9, false)"><b class="letter">D</b> Draxx Them Clownst</a></li>
+							<li><a onclick="playSound(11, false)"><b class="letter">E</b> That Was Easy</a></li>
+							<li><a onclick="playSound(1, true)"><b class="letter">F</b> Fire Shotgun</a></li>
+							<li><a onclick="playSound(15, true)"><b class="letter">G</b> Giggity</a></li>							
+							<li><a onclick="playSound(13, false)"><b class="letter">H</b> Hey Kid</a></li>
+							<li><a onclick="playSound(22, true)"><b class="letter">I</b> Toasty</a></li>
+							<li><a onclick="playSound(18, false)"><b class="letter">K</b> God Dangit Bobby</a></li>							
+							<li><a onclick="playSound(17, false)"><b class="letter">M</b> Quick Maths</a></li>
+							<li><a onclick="playSound(21, false)"><b class="letter">N</b> Deez Nutz</a></li>
+							<li><a onclick="playSound(7, true);"><b class="letter">O</b> Oh Yeah</a></li>
+              <li><a onclick="playSound(14, false);"><b class="letter">P</b> Pork Chop</a></li>
+              <li><a onclick="playSound(19, false);"><b class="letter">Q</b> Perfect</a></li>              
+							<li><a onclick="playSound(8, true);"><b class="letter">R</b> Ricola</a></li>
+							<li><a onclick="playSound(10, true);"><b class="letter">S</b> Damn Son</a></li>
+							<li><a onclick="playSound(2, false)"><b class="letter">T</b> Turn down for what?</a></li>
+							<li><a onclick="playSound(23, true)"><b class="letter">W</b> SW Everday</a></li>
+							<li><a onclick="playSound(5, true);"><b class="letter">Y</b> Yasss!</a></li>
+							<li style="border-bottom: 1px solid black"><a onclick="playSound(20, true);"><b class="letter">Z</b> &gt; Aw Thanks Mista!</a></li>
 							<li><a onclick="playRandomSound();"><b>?</b> &gt; Random Sound</a></li>
 						</ul>
 					</div>
