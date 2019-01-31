@@ -59,6 +59,10 @@ window.onkeydown = function(event){
     	var overlapping = true;
     	var notOverlapping = false;
     	
+    	    	if(keycode == 27){
+        	for(i=0; i<window.sounds.length; i++) { window.sounds[i].pause(); window.sounds[i].currentTime = 0;} 
+    	}
+    	
     	if( shifted == false ) {
 	   //Spacebar Horn
     	if(keycode == 32){
