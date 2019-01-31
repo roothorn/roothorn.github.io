@@ -16,6 +16,33 @@
       label, [class$="-value"] {float: right; background: black; border-radius: 5px; color: #fff; font-size: 12px; font-weight: bold; min-width: 5em; font-family: Tahoma, Arial, sans-serif; text-align: center; margin-top: 5px } .speechform { width: 370px } [class$="-value"] { float: none }
       li a b.letter { background: black; color: #fff; border-radius: 100%; display: inline-block; width: 14px; height: 14px; text-align: center; border: 1px solid #fff }
       .settings.gear { text-decoration: none; font-size: 16pt; margin-left: 2px; display: inline-block; position: relative; top: 3px; font-weight: bold } .horn.image { z-index: -1 }
+      
+      .submit.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.submit.button:hover {
+	background-color:#77a809;
+}
+.submit.button:active {
+	position:relative;
+	top:1px;
+}
 			</style>
 			<!-- root scripts -->
 			<!-- <script type="text/javascript" async="" src="dc.js"></script> -->
@@ -34,6 +61,36 @@
 			</script>
 		</head>
 		<body class="">
+		<form class="speechform">
+    <input type="text" class="txt" value="You're the man now dawg!" onkeydown="event.stopPropagation();" /><a href="#" class="settings gear up" onclick="document.querySelector('.speechconfig').classList.toggle('hidden');">&#9881;</a><br />
+    
+    <div class="speechconfig hidden">
+        <select>
+
+    </select>
+    <div>
+      <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+      <div class="rate-value">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <div>
+      <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+      <div class="pitch-value">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <div>
+      <label for="volume">Volume</label><input type="range" min="0.1" max="10" value="10" step="0.5" id="volume">
+      <div class="volume-value">10</div>
+      <div class="clearfix"></div>
+    </div>
+    
+    </div>
+    
+    <div class="controls">
+      <button id="play" class="submit button" type="submit">Speak It</button>
+    </div>
+    </form>
+    
 			<div class="container" id="horn">
 				<img class="horn image" src="pipe.gif" alt="BWAAAAMP" onclick="playSound(0,true)">
 				<div id="audioElements"></div>
@@ -85,35 +142,7 @@
 				</div>	-->
 			</div>
 
-<form class="speechform">
-    <input type="text" class="txt" value="You're the man now dawg!" onkeydown="event.stopPropagation();" /><a href="#" class="settings gear up" onclick="document.querySelector('.speechconfig').classList.toggle('hidden');">&#9881;</a><br />
-    
-    <div class="speechconfig hidden">
-        <select>
 
-    </select>
-    <div>
-      <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
-      <div class="rate-value">1</div>
-      <div class="clearfix"></div>
-    </div>
-    <div>
-      <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
-      <div class="pitch-value">1</div>
-      <div class="clearfix"></div>
-    </div>
-    <div>
-      <label for="volume">Volume</label><input type="range" min="0.1" max="10" value="10" step="0.5" id="volume">
-      <div class="volume-value">10</div>
-      <div class="clearfix"></div>
-    </div>
-    
-    </div>
-    
-    <div class="controls">
-      <button id="play" type="submit">Speak It</button>
-    </div>
-    </form>
 
 	<script type="text/javascript">
 			var synth = window.speechSynthesis;
