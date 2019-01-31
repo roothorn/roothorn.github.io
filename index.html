@@ -43,7 +43,7 @@
 					</div>
 					<div class="help-content">
 						<ul>
-							<li style="border-bottom: 1px solid black"><a onclick="playSound(0, true)"><b>[ Spacebar ]</b>Rasta Horn</a></li>
+							<li style="border-bottom: 1px solid black"><a onclick="playSound(0, true)"><b>[ Spacebar ]</b>&nbsp;Rasta Horn</a></li>
               <li><a onclick="playSound(12, true);"><b class="letter">A</b> Aw Hell Naw</a></li>
 							<li><a onclick="playSound(6, true);"><b class="letter">B</b> Beeb (Mac Message)</a></li>
 							<li><a onclick="playSound(16, true);"><b class="letter">C</b> Dixie Horn</a></li>							
@@ -53,9 +53,9 @@
 							<li><a onclick="playSound(15, true)"><b class="letter">G</b> Giggity, Giggity</a></li>							
 							<li><a onclick="playSound(13, false)"><b class="letter">H</b> Hey Kid</a></li>
 							<li><a onclick="playSound(22, true)"><b class="letter">I</b> Toasty</a></li>
-							<li><a onclick=""><b class="letter">J</b> UNMAPPED</a></li>	
+							<li><a onclick=""><b class="letter">J</b> </a></li>	
 							<li><a onclick="playSound(18, false)"><b class="letter">K</b> God Dangit Bobby</a></li>
-							<li><a onclick=""><b class="letter">L</b> UNMAPPED</a></li>				
+							<li><a onclick=""><b class="letter">L</b> </a></li>				
 							<li><a onclick="playSound(17, false)"><b class="letter">M</b> Quick Maths</a></li>
 							<li><a onclick="playSound(21, false)"><b class="letter">N</b> Deez Nutz</a></li>
 							<li><a onclick="playSound(7, true);"><b class="letter">O</b> Oh Yeah</a></li>
@@ -64,13 +64,13 @@
 							<li><a onclick="playSound(8, true);"><b class="letter">R</b> Ricola</a></li>
 							<li><a onclick="playSound(10, true);"><b class="letter">S</b> Damn Son</a></li>
 							<li><a onclick="playSound(2, false)"><b class="letter">T</b> Turn down for what?</a></li>
-							<li><a onclick=""><b class="letter">U</b> UNMAPPED</a></li>
-							<li><a onclick=""><b class="letter">V</b> UNMAPPED</a></li>								
+							<li><a onclick=""><b class="letter">U</b> </a></li>
+							<li><a onclick=""><b class="letter">V</b> </a></li>								
 							<li><a onclick="playSound(23, true)"><b class="letter">W</b> SW Everday</a></li>
 							<li><a onclick="playSound(5, true);"><b class="letter">Y</b> Yasss!</a></li>
 							<li style="border-bottom: 1px solid black" class="letter"><a onclick="playSound(20, true);"><b class="letter">Z</b> Aw Thanks Mista!</a></li>
 							<li><a onclick="playRandomSound();"><b class="letter">?</b> Random Sound</a></li>
-							<li><a onclick="for(i=0; i<window.sounds.length; i++) window.sounds[i].pause();"><b>Esc</b> Stop All</li>
+							<li><a onclick="for(i=0; i<window.sounds.length; i++) { window.sounds[i].pause(); window.sounds[i].currentTime = 0;} "><b>[ Esc ]</b>&nbsp;Stop All</li>
 						</ul>
 					</div>
 				</div>
