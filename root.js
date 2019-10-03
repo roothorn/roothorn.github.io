@@ -46,7 +46,11 @@ function playSound(number, overlapping = false) {
           snd.play();
           
         }
-        else { window.sounds[number].play(); }
+        else { const playPromise = window.sounds[number].play(); 
+                if (playPromise !== null){
+                playPromise.catch(() => { window.sounds[number].play(); })
+                }
+              }
         console.log(number);
     }
       //sounds[number].play();
