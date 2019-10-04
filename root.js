@@ -32,7 +32,7 @@ window.sounds = new Array();
 //window.sounds.forEach(muteFunction);
 
 function muteFunction(item, index){ window.sounds[index].muted = true; console.log(index); }
-function unmute(){ var index = 0; while( index < window.sounds.length) { window.sounds[index].muted = false; console.log(index); index++} }
+function unmute(){ var index = 0; while( index < window.sounds.length) { window.sounds[index].muted = false; document.getElementById('' + index + '').muted = false; console.log(index); index++} }
 
 function stopSound(number) {
     if (sounds[number]) {
@@ -42,8 +42,9 @@ function stopSound(number) {
 
 function playSound(number, overlapping = false) {
 
-    if( (arguments.length == 0 && parseInt(window.location.hash.replace("#", ""), 10) < window.sounds.length) || number == null )
+    if( (arguments.length == 0 && parseInt(window.location.hash.replace("#", ""), 10) < window.sounds.length) || number == null ) {
       number = parseInt(window.location.hash.replace("#", ""), 10);
+    }
       
     if(sounds[number]){
       var snd = new Audio();
